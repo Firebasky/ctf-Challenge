@@ -4,7 +4,7 @@
 
 题目给了一个war包，非常明显是通过tomcat搭建。
 
-为了方便我转换成了springboot项目。项目：
+为了方便我转换成了springboot项目。项目：https://github.com/Firebasky/ctf-Challenge/tree/main/RCTF-2021-EZshell
 
 ![image-20210913114019903](img/image-20210913114019903.png)
 
