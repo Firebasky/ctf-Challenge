@@ -318,6 +318,21 @@ https://blog.0kami.cn/2019/11/10/java/study-java-deserialized-shiro-1-2-4/
 
 **而上面是shiro550不能利用的原因，本题原因？不是特别懂。之后在深入了解。**
 
+更新:自己跟了一下resolveClass一般会返回Class，而该Class是通过this.classLoader.loadClass()去获得的，也就是类加载器去获得的，这里涉及了类双亲委派。是通过类名去加载的，如果传递数组肯定要抛异常，细节就是通过findClass()去找父类去尝试加载。
+
+
+```java
+findClass:380, URLClassLoader (java.net)
+loadClass:424, ClassLoader (java.lang)
+loadClass:411, ClassLoader (java.lang)
+loadClass:349, Launcher$AppClassLoader (sun.misc)
+loadClass:411, ClassLoader (java.lang)
+loadClass:357, ClassLoader (java.lang)
+resolveClass:22, MyObjectInputStream (com.tctffinal.demo)
+```
+![image](https://user-images.githubusercontent.com/63966847/135137346-74fc61bf-c1c9-4d91-a226-50afff0e9be7.png)
+
+
 那为什么shiro可以配合tempimpl打该题不行。原因还是因为jdk不支持。
 
 >其实createTemplatesImpl的利用方式中还是存在数组形式的，byte[]数组用于存储evil class。但是在tomcat 7及以上的环境下，java的原生数据类型的数组还原不影响反序列化，只针对对象级别的数组还原。而tomcat6的实现方式直接不允许数组类型的还原，也就是说该利用链在tomcat6的环境下是成功不了的。
