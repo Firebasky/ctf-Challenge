@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <refresh>6000</refresh>
+    <mode>
+        <!-- set to false for blocking mode -->
+        <profiling>false</profiling>
+    </mode>
+    <blacklist>
+        <regexps>
+            <regexp>org\.apache\.commons\.beanutils\.BeanComparator$</regexp>
+            <regexp>org\.apache\.commons\.collections\.Transformer$</regexp>
+            <regexp>org\.apache\.commons\.collections\.functors\.InvokerTransformer$</regexp>
+            <regexp>org\.apache\.commons\.collections\.map\.LazyMap</regexp>
+
+            <regexp>com\.sun\.rowset\.JdbcRowSetImpl$</regexp>
+            <regexp>java\.rmi\.registry\.Registry$</regexp>
+            <regexp>java\.rmi\.server\.ObjID$</regexp>
+            <regexp>java\.rmi\.server\.RemoteObjectInvocationHandler$</regexp>
+            <regexp>org\.springframework\.beans\.factory\.ObjectFactory$</regexp>
+            <regexp>org\.springframework\.core\.SerializableTypeWrapper\$MethodInvokeTypeProvider$</regexp>
+            <regexp>org\.springframework\.aop\.framework\.AdvisedSupport$</regexp>
+            <regexp>org\.springframework\.aop\.target\.SingletonTargetSource$</regexp>
+            <regexp>org\.springframework\.aop\.framework\.JdkDynamicAopProxy$</regexp>
+            <regexp>org\.springframework\.core\.SerializableTypeWrapper\$TypeProvider$</regexp>
+            <regexp>org\.springframework\.aop\.framework\.JdkDynamicAopProxy$</regexp>
+            <regexp>java\.util\.PriorityQueue$</regexp>
+            <regexp>java\.lang\.reflect\.Proxy$</regexp>
+            <regexp>javax\.management\.MBeanServerInvocationHandler$</regexp>
+            <regexp>javax\.management\.openmbean\.CompositeDataInvocationHandler$</regexp>
+            <regexp>java\.beans\.EventHandler$</regexp>
+            <regexp>java\.util\.Comparator$</regexp>
+            <regexp>org\.reflections\.Reflections$</regexp>
+        </regexps>
+    </blacklist>
+    <whitelist>
+        <regexps>
+            <regexp>.*</regexp>
+        </regexps>
+    </whitelist>
+</config>
