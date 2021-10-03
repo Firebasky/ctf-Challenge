@@ -48,7 +48,7 @@ server {
     location / {
         root   /usr/share/nginx/html;
         index  index.html index.htm;
-		proxy_pass http://web:8080;
+	proxy_pass http://web:8080;
     }
     error_page   500 502 503 504  /50x.html;
     location = /50x.html {
