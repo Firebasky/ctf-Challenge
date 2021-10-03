@@ -34,7 +34,7 @@ networks:
         internal: true
         ipam:
             driver: default
-    out_network:#外部网络。。
+    out_network: #外部网络。。
         ipam:
             driver: default
 
