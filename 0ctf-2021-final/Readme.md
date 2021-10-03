@@ -7,9 +7,11 @@
 >resovleClass使用的是ClassLoader.loadClass()而非Class.forName()，而ClassLoader.loadClass不支持装载数组类型的class。
 >这样好理解吧？真正的原因自己不好表示。大概就是装载数组类型的class之后通过URLClassLoader去操作不会加载classpath?
 
-——通过nginx代理内网的8080端口到80. 导致不出网。——
+~~通过nginx代理内网的8080端口到80. 导致不出网。~~
+
 之后yellow给我说，原来是因为docker-compose.yml里面配置的问题和nginx没有关系。
-```
+
+```yml
 version: '2.4'
 services:
   nginx:
@@ -39,7 +41,7 @@ networks:
 ```
 
 
-```
+```yml
 server {
     listen       80;
     server_name  localhost;
