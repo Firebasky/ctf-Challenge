@@ -374,8 +374,15 @@ resolveClass:22, MyObjectInputStream (com.tctffinal.demo)
 ![image](https://user-images.githubusercontent.com/63966847/135975045-58b9ceb0-f39c-4264-b693-2199b51d8eba.png)
 在shiro中利用的createTemplatesImpl可以实现，在该题不行，因为使用的加载器不一样，在shiro中是new TomcatEmbeddedWebappClassLoader().loadClass()
 所以我们将题目中的 new URLClassLoader(urls);换成new TomcatEmbeddedWebappClassLoader().loadClass()就可以直接使用cc11 打了。
-那么他们的区别在哪？
 
+那么他们的区别在哪？
+new TomcatEmbeddedWebappClassLoader().loadClass() 是最后是通过Class#forName去加载使用的是AppClassloader
+
+而new URLClassLoader(urls)是使用的URLClassLoader加载找不到我们创建的evil class.所以报错
+
+![image](https://user-images.githubusercontent.com/63966847/135981291-972bd657-d372-4e58-8651-941daac8519e.png)
+
+![image](https://user-images.githubusercontent.com/63966847/135981528-9bb8b0e7-7c85-446d-befb-ea9b3e6b7ee1.png)
 
 
 >参考：
