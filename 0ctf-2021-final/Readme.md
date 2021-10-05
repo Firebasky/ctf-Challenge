@@ -370,7 +370,11 @@ resolveClass:22, MyObjectInputStream (com.tctffinal.demo)
 
 >其实createTemplatesImpl的利用方式中还是存在数组形式的，byte[]数组用于存储evil class。但是在tomcat 7及以上的环境下，java的原生数据类型的数组还原不影响反序列化，只针对对象级别的数组还原。而tomcat6的实现方式直接不允许数组类型的还原，也就是说该利用链在tomcat6的环境下是成功不了的。
 
-
+**2021/10/5更新**
+![image](https://user-images.githubusercontent.com/63966847/135975045-58b9ceb0-f39c-4264-b693-2199b51d8eba.png)
+在shiro中利用的createTemplatesImpl可以实现，在该题不行，因为使用的加载器不一样，在shiro中是new TomcatEmbeddedWebappClassLoader().loadClass()
+所以我们将题目中的 new URLClassLoader(urls);换成new TomcatEmbeddedWebappClassLoader().loadClass()就可以直接使用cc11 打了。
+那么他们的区别在哪？
 
 
 
