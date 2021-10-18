@@ -12,5 +12,5 @@
 5 临时文件下载通过自搭建http服务sleep 同时添加恶意字符
 ```
 
-+ [bytectf2021 jfinal-blog]()  **当时找了执行命令的链了就是在之前文章基础上进行找一个可以实例化的静态方法**  [文章](https://p1n93r.github.io/post/code_audit/jfinal_enjoy_template_engine%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E7%BB%95%E8%BF%87%E5%88%86%E6%9E%90/) 不过后面是绕过sm，不是特别会。。。有空复现一下
++ [bytectf2021 jfinal-blog]()  **当时找了执行命令的链了就是在之前文章基础上进行找一个可以实例化的静态方法**  [文章](https://p1n93r.github.io/post/code_audit/jfinal_enjoy_template_engine%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E7%BB%95%E8%BF%87%E5%88%86%E6%9E%90/) 不过后面是绕过sm，不是特别会。。。有空复现一下 **wp [w&m](https://mp.weixin.qq.com/s?__biz=MzIxMDYyNTk3Nw==&mid=2247487623&idx=1&sn=6af26955e14351cf9515bbf474fb647b&chksm=9760e451a0176d47c5f8939fbf184935fa9147261a10f7df5ffac3547ab79c173af6bf6c8700&mpshare=1&scene=23&srcid=1018c3AExTrw73QjabyapfIP&sharer_sharetime=1634567277653&sharer_shareid=2b0ae855257c7b8d85dd6333d1f3b7fa#rd)**
 + [2021xyb 下线俩个java]()  有空z...
