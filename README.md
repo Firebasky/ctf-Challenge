@@ -13,3 +13,4 @@
 ```
 
 + [bytectf2021 jfinal-blog]()  **当时找了执行命令的链了就是在之前文章基础上进行找一个可以实例化的静态方法**  [文章](https://p1n93r.github.io/post/code_audit/jfinal_enjoy_template_engine%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E7%BB%95%E8%BF%87%E5%88%86%E6%9E%90/) 不过后面是绕过sm，不是特别会。。。有空复现一下
++ [2021xyb 下线俩个java]()  有空z...
