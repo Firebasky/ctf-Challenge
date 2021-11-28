@@ -116,4 +116,4 @@ jolokia/exec/com.sun.management:type=DiagnosticCommand/vmLog/output=!/tmp!/pwned
 jolokia/exec/com.sun.management:type=DiagnosticCommand/vmLog/disable
 ```
 
-
+需要学习:https://github.com/API-Security/APISandbox
