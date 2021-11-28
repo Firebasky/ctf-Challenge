@@ -79,9 +79,12 @@ Connection: close
 >自己一直卡在了绕过/actuator/jolokia/权限的问题，结果通过xxe去绕过。。。
 
 通过[APIKit工具](https://github.com/API-Security/APIKit)去扫描,存在/user/list接口测试发现存在xxe，之后就通过xxe打内网/actuator/jolokia/去绕过
+
 tips：内网端口通过/env去查看
 
+
 之后就通过/actuator/jolokia/接口的读文件去读flag.
+
 
 ```xml
 <?xml version = "1.0"?>
