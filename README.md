@@ -1,6 +1,7 @@
 # ctf-Challenge
 自己出的一些ctf题，最开始没有docker环境，只有源代码。
 
+## 2021
 + [WMCTF2021-Web-Make PHP Great Again And Again WriteUp](https://www.zhaoj.in/read-6951.html)  没有复现。。。。
 + [xnuca2020 easyjava](https://github.com/NeSE-Team/XNUCA2020Qualifier/tree/main/Web/easyjava)   先去学习XStream 里面有一个CVE-2020-26945 mybatis二级缓存反序列化的问题
 + [LCTF 2018 T4lk 1s ch34p,sh0w m3 the sh31l ](https://www.k0rz3n.com/2018/11/19/LCTF%202018%20T4lk%201s%20ch34p,sh0w%20m3%20the%20sh31l%20%E8%AF%A6%E7%BB%86%E5%88%86%E6%9E%90/) 个人感觉思路非常好
@@ -16,3 +17,12 @@
 + [2021xyb 下线俩个java](2021_xyb_easyJenkins)  有空z...
 + [2021qwbnt-mysql任意文件读取扩展](2021_qwbnt_Give_me_your_0day)  扩展了任意文件读取to反序列化
 + [2021_XCTF_Final_Dubo](https://lfysec.top/2021/05/31/SSRF%E6%94%BB%E5%87%BBZookeeper&Dubbo%20Consumer%20RCE/)  :heavy_check_mark:  [环境](https://github.com/LFYSec/XCTF2021Final-Dubbo)  完成。构造zk的数据包，构造rogue恶意服务
+---------------------------------------------------
+## 2022
+rwctf的java。过年前一定弄完
+https://mp.weixin.qq.com/s/hXoUs4ZJgLHHaTvoyhwFxg
+
+https://mp.weixin.qq.com/s/QQ2xR32Fxj_nnMsFCucbCg
+
+https://mp.weixin.qq.com/s/6uvvDjF6Qbxf2HU6eHBmjw
+
