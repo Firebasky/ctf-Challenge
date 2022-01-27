@@ -20,9 +20,8 @@
 ---------------------------------------------------
 ## 2022
 rwctf的java。过年前一定弄完
+
 https://mp.weixin.qq.com/s/hXoUs4ZJgLHHaTvoyhwFxg
 
 https://mp.weixin.qq.com/s/QQ2xR32Fxj_nnMsFCucbCg
-
-https://mp.weixin.qq.com/s/6uvvDjF6Qbxf2HU6eHBmjw
 
